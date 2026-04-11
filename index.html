@@ -166,7 +166,7 @@ a{color:inherit;}
   transition:background 0.2s;
 }
 .nav-logo:hover .nav-logo-sq{background:var(--blue);}
-.nav-logo-name{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--t1);}
+.nav-logo-name{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--t1);}
 .nav-links{display:none;flex:1;gap:var(--s24);}
 .nav-links a{font-size:14px;font-weight:500;color:var(--t4);text-decoration:none;transition:color 0.15s;}
 .nav-links a:hover{color:var(--t1);}
@@ -257,49 +257,51 @@ a{color:inherit;}
 .hq-attr{font-size:12px;color:var(--t4);margin-top:var(--s4);font-weight:600;font-style:normal;}
  
 /* Hero visual — CV stack */
-.hero-visual{background:var(--dark);padding:var(--s32) var(--s20);position:relative;overflow:hidden;}
+.hero-visual{
+  background:var(--dark);padding:var(--s24) var(--s20);
+  position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;
+}
 .hero-visual::before{
-  content:'';position:absolute;top:-80px;right:-80px;width:350px;height:350px;border-radius:50%;
-  background:radial-gradient(circle,rgba(0,56,255,0.14) 0%,transparent 65%);pointer-events:none;
+  content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,56,255,0.12) 0%,transparent 65%);pointer-events:none;
 }
 .cv-label{
-  font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;
-  color:var(--od4);margin-bottom:var(--s16);
+  font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--od4);margin-bottom:var(--s12);
   display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1;
 }
-.cv-live{color:#22C55E;display:flex;align-items:center;gap:var(--s6);}
-.cv-live::before{content:'';width:6px;height:6px;border-radius:50%;background:#22C55E;animation:pulse 2s infinite;}
+.cv-live{color:#22C55E;display:flex;align-items:center;gap:var(--s6);font-size:10px;}
+.cv-live::before{content:'';width:5px;height:5px;border-radius:50%;background:#22C55E;animation:pulse 2s infinite;}
  
 .cv-card{
-  background:rgba(240,234,224,0.05);border:1px solid rgba(240,234,224,0.1);
-  padding:var(--s16);margin-bottom:var(--s8);position:relative;z-index:1;
-  transition:background 0.2s;
+  background:rgba(240,234,224,0.04);border:1px solid rgba(240,234,224,0.09);
+  padding:var(--s12) var(--s14);margin-bottom:var(--s6);position:relative;z-index:1;
 }
 .cv-card:last-child{margin-bottom:0;}
-.cv-card.top{background:rgba(0,56,255,0.09);border-color:rgba(0,56,255,0.3);}
-.cv-row{display:flex;align-items:center;gap:var(--s12);}
+.cv-card.top{background:rgba(0,56,255,0.08);border-color:rgba(0,56,255,0.25);}
+.cv-row{display:flex;align-items:center;gap:var(--s10);}
 .cv-av{
-  width:34px;height:34px;flex-shrink:0;border:1px solid;
+  width:30px;height:30px;flex-shrink:0;border:1px solid;
   display:flex;align-items:center;justify-content:center;
-  font-family:var(--mono);font-size:11px;font-weight:700;
+  font-family:var(--mono);font-size:10px;font-weight:700;
 }
 .cv-info{flex:1;min-width:0;}
-.cv-name{font-size:13.5px;font-weight:700;color:var(--od1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.cv-sub{font-size:11px;color:var(--od4);margin-top:2px;}
-.cv-score{font-family:var(--mono);font-size:26px;font-weight:500;letter-spacing:-1px;line-height:1;flex-shrink:0;}
+.cv-name{font-size:12.5px;font-weight:700;color:var(--od1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.cv-sub{font-size:10.5px;color:var(--od4);margin-top:1px;}
+.cv-score{font-family:var(--mono);font-size:22px;font-weight:500;letter-spacing:-1px;line-height:1;flex-shrink:0;}
 .cv-analysis{
-  font-size:12.5px;color:var(--od3);font-style:italic;line-height:1.55;
-  padding:var(--s8) var(--s12);margin-top:var(--s10);
-  border-left:2px solid rgba(0,56,255,0.5);background:rgba(0,56,255,0.08);
+  font-size:11.5px;color:var(--od3);font-style:italic;line-height:1.5;
+  padding:var(--s6) var(--s10);margin-top:var(--s8);
+  border-left:2px solid rgba(0,56,255,0.4);background:rgba(0,56,255,0.07);
 }
 .cv-verdict{
-  font-size:11.5px;font-weight:700;color:#22C55E;
-  display:flex;align-items:center;gap:var(--s6);margin-top:var(--s8);
+  font-size:10.5px;font-weight:700;color:#22C55E;
+  display:flex;align-items:center;gap:var(--s4);margin-top:var(--s6);
 }
-.cv-tags{display:flex;gap:var(--s4);flex-wrap:wrap;margin-top:var(--s8);}
+.cv-tags{display:flex;gap:var(--s4);flex-wrap:wrap;margin-top:var(--s6);}
 .cv-tag{
-  font-size:9.5px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;
-  padding:2px 7px;color:var(--od3);border:1px solid rgba(240,234,224,0.12);
+  font-size:9px;font-weight:600;letter-spacing:.3px;text-transform:uppercase;
+  padding:1px 6px;color:var(--od3);border:1px solid rgba(240,234,224,0.1);
 }
  
 /* ═══════════════════════════════════════
@@ -929,13 +931,18 @@ footer{background:var(--dark);border-top:1px solid rgba(240,234,224,.07);}
    DESKTOP OVERRIDES — 768px+
 ═══════════════════════════════════════ */
 @media(min-width:768px){
+ 
+  /* CV cards hero desktop */
+  .cv-card.top .cv-analysis{display:block;}
+  .cv-card.top .cv-tags{display:flex;}
+  .cv-card:not(.top) .cv-analysis{display:none;}
   .section{padding:var(--s80) var(--s48);}
   .section-lg{padding:var(--s96) var(--s48);}
  
   /* Hero : split layout */
   .hero{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - var(--nav-h));}
   .hero-inner{padding:var(--s56) var(--s48);display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--bg3);}
-  .hero-visual{padding:var(--s48);display:flex;flex-direction:column;justify-content:center;}
+  .hero-visual{padding:var(--s40) var(--s32);display:flex;flex-direction:column;justify-content:center;gap:0;}
   .hero-cta-group{flex-direction:row;align-items:center;}
   .hero-quote{margin-bottom:0;}
  
@@ -1375,7 +1382,9 @@ footer{background:var(--dark);border-top:1px solid rgba(240,234,224,.07);}
 /* ── Hero visual mobile ── */
 @media(max-width:767px){
   .hero-visual{max-height:none;}
-  .cv-card:nth-child(3){display:none;}
+  .cv-card:nth-child(4){display:none;}
+  .cv-analysis{display:none;}
+  .cv-tags{display:none;}
 }
  
 </style>
@@ -1436,8 +1445,8 @@ footer{background:var(--dark);border-top:1px solid rgba(240,234,224,.07);}
  
     <h1 class="h1 hero-h1">
       Trouvez le bon<br>
-      <span class="soft">avant vos</span><br>
-      <span class="accent">concurrents.</span>
+      <span class="soft">candidat, avant</span><br>
+      <span class="accent">vos concurrents.</span>
     </h1>
  
     <p class="lead hero-desc">Pendant que vos concurrents lisent des CVs a la main, RecrutAI analyse, score et vous explique chaque candidature en francais. Setup en 5 minutes. Premiers resultats en 1h.</p>
@@ -2033,7 +2042,7 @@ footer{background:var(--dark);border-top:1px solid rgba(240,234,224,.07);}
       <div>
         <div class="overline reveal" style="margin-bottom:16px;">FAQ</div>
         <h2 class="h2 reveal">Les reponses<br><em>a vos questions.</em></h2>
-        <p class="body reveal" style="margin-top:16px;">Une question sans reponse ? <span style="color:var(--blue);font-weight:600;">contact@recrut-ai.com</span></p>
+        <p class="body reveal" style="margin-top:16px;">Une question sans reponse ? <span style="color:var(--blue);font-weight:600;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ae9e5e4feebe9fecaf8efe9f8fffea7ebe3a4e9e5e7">[email&#160;protected]</a></span></p>
       </div>
       <div class="faq-list reveal">
         <div class="faq-item"><button class="faq-q" onclick="faqToggle(this)">Puis-je tester sans carte bancaire ?<span class="faq-icon">+</span></button><div class="faq-a">Oui. 14 jours d'acces complet au plan Growth, sans carte. A la fin : choisissez un plan ou arretez. Aucune facturation automatique.</div></div>
@@ -2125,7 +2134,7 @@ footer{background:var(--dark);border-top:1px solid rgba(240,234,224,.07);}
   <button class="sticky-close" onclick="document.getElementById('sticky-bar').style.display='none'" aria-label="Fermer">×</button>
 </div>
  
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ══════════════════════════════════
    PROGRESS BAR
 ══════════════════════════════════ */
@@ -2385,10 +2394,4 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
  
 /* ══════════════════════════════════
    CTAs
-══════════════════════════════════ */
-function goToSignup() { window.location.href = 'https://app.recrut-ai.com/signup'; }
-function goToApp()    { window.location.href = 'https://app.recrut-ai.com'; }
-</script>
-</body>
-</html>
- 
+═════════════════════
